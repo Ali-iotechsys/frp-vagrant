@@ -1,0 +1,2 @@
+# frp-vagrant
+FRP Vagrant
