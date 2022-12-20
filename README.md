@@ -1,6 +1,6 @@
 # frp Demo
 This vagrant file creates 3 VMs to demo [frp](https://github.com/fatedier/frp).
-In this demo we want to ssh private servers (B1 and B2) using a public server (A)
+In this demo we want to ssh private servers (B1 or B2) using a public server (A)
 
 ![frp Demo](Diagram.png)
 
