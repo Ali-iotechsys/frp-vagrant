@@ -34,6 +34,12 @@ type = tcp
 local_ip = 127.0.0.1
 local_port = 9000
 remote_port = 9000
+
+[web03]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 9443
+remote_port = 9443
 END
 
 # Install simple webserver
