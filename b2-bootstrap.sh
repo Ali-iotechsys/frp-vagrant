@@ -18,24 +18,28 @@ tee /home/vagrant/frp_0.46.0_linux_amd64/frpc.ini << END
 server_addr = 192.168.33.10
 server_port = 7000
 
+# SSH configs
 [ssh]
 type = tcp
 local_ip = 127.0.0.1
 local_port = 22
 remote_port = 6001
 
+# Simple web server configs
 [web01]
 type = tcp
 local_ip = 127.0.0.1
 local_port = 55555
 remote_port = 55555
 
+# Portainer configs (http)
 [web02]
 type = tcp
 local_ip = 127.0.0.1
 local_port = 9000
 remote_port = 9000
 
+# Portainer configs (https)
 [web03]
 type = tcp
 local_ip = 127.0.0.1
