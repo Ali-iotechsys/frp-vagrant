@@ -22,5 +22,7 @@ To do this, please follow:
 - You can do the same to access B2 from A, but run: `$ ssh -oPort=6002 vagrant@192.168.33.10`
 - Also, you can run a web service from B1 (or B2), for example to run a simple web server: `vagrant@B1:~$ docker compose -f /vagrant/docker-compose.yaml up -d`
 - From your machine you can access this server (running in B1) from A: `$ curl http://192.168.33.10:55555`
+- Alternatively, you could run `portainer` on B1 (or B2): `vagrant@B1:~$ docker run -d -p 8000:8000 -p 9443:9443 -p 9000:9000 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest --http-enabled`
+- From a browser at your machine, you can access `portainer` using A address: `http://192.168.33.10:9000`
 - To stop the demo and remove the VMs, run: `$ vagrant destroy -f`
 

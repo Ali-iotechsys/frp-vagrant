@@ -23,15 +23,18 @@ local_ip = 127.0.0.1
 local_port = 22
 remote_port = 6001
 
-[web]
+[web01]
 type = tcp
 local_ip = 127.0.0.1
 local_port = 55555
 remote_port = 55555
-END
 
-# Install Portainer
-#docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+[web02]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 9000
+remote_port = 9000
+END
 
 # Install simple webserver
 mkdir /home/vagrant/src
