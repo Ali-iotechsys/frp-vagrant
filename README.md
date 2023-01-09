@@ -18,5 +18,7 @@ To do this, please follow:
 - Open a new terminal and run: `$ ssh -oPort=6001 vagrant@192.168.33.10`, `vagrant/vagarnt` is username/password and `192.168.33.10` is the public address of A.
 - You should notice that you accessed B1 from A, to double check run: `vagrant@B1:~$ hostname`
 - You can do the same to access B2 from A, but run: `$ ssh -oPort=6002 vagrant@192.168.33.10`
+- Also, you can run a web service from B1 (or B2), for example to run a simple web server: `vagrant@B1:~$ docker compose -f /vagrant/docker-compose.yaml up -d`
+- From your machine you can access this server (running in B1) from A: `$ curl http://192.168.33.10:55555`
 - To stop the demo and remove the VMs, run: `$ vagrant destroy -f`
 

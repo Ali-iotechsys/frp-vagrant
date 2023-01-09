@@ -8,6 +8,7 @@ BASE_IMAGE = "bento/ubuntu-22.04"
 
 VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
 # Create A
   config.vm.define "A" do |subconfig|
     subconfig.vm.box = BASE_IMAGE
