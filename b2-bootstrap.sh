@@ -23,7 +23,7 @@ server_port = 7000
 type = tcp
 local_ip = 127.0.0.1
 local_port = 22
-remote_port = 6001
+remote_port = 6002
 
 # Simple web server configs
 [web01]
