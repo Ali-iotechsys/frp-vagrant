@@ -15,7 +15,7 @@ tar -xf frp_0.46.0_linux_amd64.tar.gz
 tee /home/vagrant/frp_0.46.0_linux_amd64/frpc.ini << END
 [common]
 server_addr = 192.168.33.10
-server_port = 7000
+server_port = 7001
 
 # SSH configs
 [ssh]

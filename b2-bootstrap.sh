@@ -16,7 +16,7 @@ tar -xf frp_0.46.0_linux_amd64.tar.gz
 tee /home/vagrant/frp_0.46.0_linux_amd64/frpc.ini << END
 [common]
 server_addr = 192.168.33.10
-server_port = 7000
+server_port = 7002
 
 # SSH configs
 [ssh]
@@ -25,26 +25,26 @@ local_ip = 127.0.0.1
 local_port = 22
 remote_port = 6002
 
-# Simple web server configs
-[web01]
-type = tcp
-local_ip = 127.0.0.1
-local_port = 55555
-remote_port = 55555
+## Simple web server configs
+#[web01]
+#type = tcp
+#local_ip = 127.0.0.1
+#local_port = 55555
+#remote_port = 55555
 
-# Portainer configs (http)
-[web02]
-type = tcp
-local_ip = 127.0.0.1
-local_port = 9000
-remote_port = 9000
+## Portainer configs (http)
+#[web02]
+#type = tcp
+#local_ip = 127.0.0.1
+#local_port = 9000
+#remote_port = 9000
 
-# Portainer configs (https)
-[web03]
-type = tcp
-local_ip = 127.0.0.1
-local_port = 9443
-remote_port = 9443
+## Portainer configs (https)
+#[web03]
+#type = tcp
+#local_ip = 127.0.0.1
+#local_port = 9443
+#remote_port = 9443
 END
 
 # Install simple webserver
