@@ -27,3 +27,8 @@ To do this, please follow:
 - From a browser at your machine, you can access `portainer` using A address: `http://192.168.33.10:9000` or `https://192.168.33.10:9443`
 - To stop the demo and remove the VMs, run: `$ vagrant destroy -f`
 
+## Note
+- if you have the command `sshpass` already installed in your machine, you could ssh B1 from A directly using your machine:
+    `sshpass -e ssh -o StrictHostKeyChecking='no' -t vagrant@192.168.33.10 'ssh -oPort=6001 -i /home/vagrant/.ssh/id_rsa vagrant@127.0.0.1'`, assuming storing A user password in the environment variable `SSHPASS`, for example `$ export SSHPASS=vagrant`.
+
+
