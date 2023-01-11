@@ -20,7 +20,7 @@ To do this, please follow:
 - Open a new terminal and run: `$ ssh -oPort=6001 vagrant@192.168.33.10`, `vagrant/vagarnt` is username/password and `192.168.33.10` is the public address of A.
 - You should notice that you accessed B1 from A, to double check run: `vagrant@B1:~$ hostname`
 - You can do the same to access B2 from A, but run: `$ ssh -oPort=6002 vagrant@192.168.33.10`
-- if you have [generated an ssh key pair](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server) to access B1 from A without input password, you could access B1 from A as: `vagrant@A:~$ ssh -o StrictHostKeyChecking='no' -i /home/vagrant/.ssh/id_rsa vagrant@127.0.0.1` whereas `id_rsa` is the private key. 
+- if you have [generated an ssh key pair](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server) to access B1 from A without input password, you could access B1 from A as: `vagrant@A:~$ ssh -oPort=6001 -i /home/vagrant/.ssh/id_rsa vagrant@127.0.0.1` whereas `id_rsa` is the private key. 
 - Also, you can run a web service from B1 (or B2), for example to run a simple web server: `vagrant@B1:~$ docker compose -f /vagrant/docker-compose.yaml up -d`
 - From your machine you can access this server (running in B1) from A: `$ curl http://192.168.33.10:55555`
 - Alternatively, you could run `portainer` on B1 (or B2): `vagrant@B1:~$ docker run -d -p 8000:8000 -p 9443:9443 -p 9000:9000 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest --http-enabled`
